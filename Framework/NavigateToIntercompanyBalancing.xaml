@@ -1,0 +1,315 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="NavigateToIntercompanyBalancing" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Link" Type="InArgument(x:String)" />
+    <x:Property Name="in_Stage" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1794,3002</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>NavigateToIntercompanyBalancing_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="NavigateToIntercompanyBalancing" sap:VirtualizedContainerService.HintSize="1156,2937" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Manage Intercompany Balancing Rules - Setup and Maintenance - Oracle Fusion Clou" sap:VirtualizedContainerService.HintSize="1094,2826" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="4cdef64a-f7d9-4709-87af-23f92d9217e3" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Navigate to Manage Intercompany Balancing Rules" sap:VirtualizedContainerService.HintSize="1060,2609" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NCheckState DisplayName="Check App State 'Manage Intercompany Bal…'" sap:VirtualizedContainerService.HintSize="998,2496" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="4cdef64a-f7d9-4709-87af-23f92d9217e3" Version="V4">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="472,542" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[in_Stage = &quot;2&quot;]" sap:VirtualizedContainerService.HintSize="410,427" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="5" DisplayName="Click 'Legal Entity Rules +'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4cdef64a-f7d9-4709-87af-23f92d9217e3" Version="V4">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="fa-ewqc-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FuseTaskListManagerTop" CVScreenId="23ec0ee1-eda5-45f4-9860-90096fa86b16" CvElementArea="174, 654, 22, 21" CvTextArea="176, 656, 18, 17" CvType="Icon" DesignTimeRectangle="173, 652, 26, 26" DesignTimeScaleFactor="1" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' class='xiz' tag='TABLE' /&gt;&lt;webctrl type='' tag='IMG' class='x1kb' aaname='Create' /&gt;" Guid="96ace887-4c4e-4575-83d8-776d5a299f62" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABQSURBVEhL7c2xCgAgCITh3r6loTeuORM0iRPqPrjFwb+MJEUeUBiGYRgmFK6tL4tg2OXtsIx4Z2F4Ix96ZzHDmtOIhmGX/8I3MAzDMExaeAI6UYD0JB3gJwAAAABJRU5ErkJggg==" InformativeScreenshot="2770cab62c8e0b63766880844cac0b5d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='no8eyagrh' title='Manage Intercompany Balancing Rules - Setup and Maintenance - Oracle Fusion Cloud Applications' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V4" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CVScreenId="23ec0ee1-eda5-45f4-9860-90096fa86b16" CvTextArea="176, 612, 105, 14" CvTextArgument="Legal Entity Rules" CvType="Text" DesignTimeRectangle="168, 605, 122, 30" FuzzySelectorArgument="&lt;webctrl aaname='  From Ledger To Ledger From Legal Entity To Legal Entity Receivables Account Payables Account Start Date End Date Source Category Transaction Type' aria-role='presentation' tag='TABLE' /&gt;&lt;webctrl type='' class='x1gd' aaname='' tag='DIV' check:innerText='Legal Entity Rules' /&gt;" Guid="206b4ce2-185b-4cfd-bdd3-ac33b39e8864" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH4AAAAiCAYAAACZb20EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAJlSURBVHhe7Zh7joIwEIe9g3HvYozXIYRzbPYE6llMuIvRk3TDozDzY1oKsqg78yX9Q0ofM18fxI0zVLLBB4YOTLxSTLxSTLxSTLxSTLxSTLxSTLxSTLxSTLxSpom/nd1ht3WH0x1r/oZr5r52W5dfscK5x2lf1w1KUeKrMtesjwPHqeJM7aejdDnOpS6ZS+pp5dx+uPi9u9ywJoFoHK3AueJZO+lZgOiclmdZ8a0oaaWXhX++d3nBpfHdS2Q+Ib4ZL3OXrm//LuzMSko3zt1djqTu+O1+qt/Hs3u0/YbHlSS3/fn2EA/ra5BbPheac56vxBMFWE48q5MDZnUsYD/5NnmBRFHCAhr8QmvaghSMg43D3+XjQFwMSTw8myDeL9y6JW3H3pPGTGMx8Sii+d1MvAkC67g0toqTxZPd2Rb/Lh8ThGEcEfHsXWzHCNzxVEqyeBTa/KZzqPqR55HGYuL7o5yWJii2ejFgfz3UUuSTIix+bMf7MZ8Q79sW5ciYvJ3PB8tVqngiV1pEmGvJxxiLiY8lJbbjo4LeQnx/euVVn+IxX4Ht/AlA5pgqftBXAL9pInkIsZh4XicLZEG1kw3v/mGiKGuKTzteh+2660i6NsRvnb7/4B0POcHTNJVZ4ukxwwLrVuBwMv3xhF/19G7cu0OdDCFgIHTHe7lR8fSLuXomJlNoH1lokng6zrBvyAMuRjpHWHAYu5SfMaaJn4uY2Omr9HXgwvl81hEPq3fuKn0F/e6K7fbPYyXxxrth4pVi4pVi4pVi4pVi4pVi4pVi4pVi4pVi4pXSiad/p1r5v8XEKy2eX2L1M5DPH35EAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_19" />
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="472,2279" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" sap:VirtualizedContainerService.HintSize="410,87" sap2010:WorkflowViewState.IdRef="Activate_1">
+                    <ui:Activate.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="051dc09f-5a57-4bb4-a46f-4d5b9ded39d7">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:Activate.Target>
+                  </ui:Activate>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Home'" sap:VirtualizedContainerService.HintSize="410,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4cdef64a-f7d9-4709-87af-23f92d9217e3" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://fa-ewqc-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FuseTaskListManagerTop?_adf.ctrl-state=bzxve1gy1_192&amp;_afrLoop=52587567410626588&amp;_afrFS=16&amp;_afrMT=screen&amp;_afrMFW=1920&amp;_afrMFH=893&amp;_afrMFDW=1920&amp;_afrMFDH=1080&amp;_afrMFC=8&amp;_afrMFCI=0&amp;_afrMFM=0&amp;_afrMFR=96&amp;_afrMFG=0&amp;_afrMFS=0&amp;_afrMFO=0" CvType="Icon" DesignTimeRectangle="1707, 163, 19, 19" DesignTimeScaleFactor="1" ElementType="Icon" FullSelectorArgument="&lt;webctrl class='xiz' tableRow='1' tag='TABLE' /&gt;&lt;webctrl class='svg-outline' tableCol='2' tableRow='1' tag='path' /&gt;" FuzzySelectorArgument="&lt;webctrl class='xiz' tag='TABLE' /&gt;&lt;webctrl class='svg-outline' type='' aaname='' tag='path' /&gt;" Guid="42c28ab8-6510-4cb3-b534-f162a0d308b7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAYAAADgKtSgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEESURBVEhLYzDU1fpPDG5urAdjdHF8mAFdAB2HBPj9P3TwwH8YALFBYujqsGG8hk+e2A83FB2A5NDVo2Oshqckxv+/fOki3KDTp079j40MB2MQGwYuXbwAVouuH6vhJga6/xcvXADX/Pv37/89XR0YmkBiIDkYAOkB6UVXBze8uDDv/6OHD+Ea9uze9d/Xyx1DAwyD5EBqYACkF2QGiuEuDrb/N23cAFf05vXr/7VVlRiG4cIgtSA9MAAyC2Qm2PAZ06bCJdasWvnf1tIcwwBCGKQHpBcGQGaiGL51y2YMTaRikBmjhmPgUcOx4lHDseKBM5waGKvh1AQohtMCgw1HDzdqYgDrf4i3kaeKEgAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='4o4qo1t66' title='Setup and Maintenance - Oracle Applications' /&gt;" SearchSteps="Selector, Image" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'My Enterprise'" sap:VirtualizedContainerService.HintSize="410,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4cdef64a-f7d9-4709-87af-23f92d9217e3" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://fa-ewqc-dev4-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FuseWelcome?_adf.ctrl-state=kn6j0dekp_340&amp;fnd=%3B%3B%3B%3Bfalse%3B256%3B%3B%3B&amp;_afrLoop=49504532507393538" CvTextArgument="My Enterprise" CvType="Text" DesignTimeRectangle="1836, 357, 103, 22" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='groupNode_MyEnterprise' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='groupNode_MyEnterprise' tag='A' type='' class='flat-tabs-text selected' aaname='My Enterprise' check:innerText='My Enterprise' /&gt;" Guid="b34556eb-7c86-465e-9646-4d7702bd2245" ImageBase64="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" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='66nes6ysl' title='Oracle Fusion Cloud Applications' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Setup and Maintenance'" sap:VirtualizedContainerService.HintSize="410,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4cdef64a-f7d9-4709-87af-23f92d9217e3" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://fa-ewqc-dev4-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FuseWelcome?_adf.ctrl-state=kn6j0dekp_340&amp;fnd=%3B%3B%3B%3Bfalse%3B256%3B%3B%3B&amp;_afrLoop=49504532507393538" CvType="Button" DesignTimeRectangle="1221, 562, 110, 54" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl id='itemNode_MyEnterprise_setup_and_maintenance_0' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='itemNode_MyEnterprise_setup_and_maintenance_0' tag='A' type='' class='app-nav-label flat-grid-nav-label' aaname='Setup and Maintenance' check:innerText='Setup and Maintenance' /&gt;" Guid="9ba0edd6-b121-4350-8547-af57a8bf1a12" ImageBase64="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" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='66nes6ysl' title='Oracle Fusion Cloud Applications' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click dropdown" sap:VirtualizedContainerService.HintSize="410,157" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4cdef64a-f7d9-4709-87af-23f92d9217e3" Version="V4">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="fa-ewqc-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FuseTaskListManagerTop" CVScreenId="b98f77f2-6019-457f-a83f-fcc7539f8c47" CvElementArea="179, 158, 24, 21" CvType="Icon" DesignTimeRectangle="182, 162, 19, 14" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aria-role='button' type='' tag='A' class='x1l4' aaname='' /&gt;" Guid="f067260e-a798-4187-9980-7ce28a084e1c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABcAAAASCAYAAACw50UTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADTSURBVDhPYzDU1fpPK8yALkBNjGJ4Qk75//K+hf/L+haRjEH6QPqxGg6SmLli2//7T579f/H6LckYpA+kH9kCuOEgm8k1GNkCkDkYhoO8hq6YHAwyZ+ANv3jl2n9RUdH/DAwMGFhMTOz/pavXMfQQbTgIr1y99j8zMzOKwSD+2vUbMdSSbDgIFxYVoxheWl6BoYZsw5++ePXfytoabLC9gwOYj66GbMNBGBT+urp6/69cv4khR7HhIPzk+UsMMXSM1XCaZiKaZn+YBTQpuGiBaWo4AAqGP/O44C+nAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='qbd0w35m1' title='Setup and Maintenance - Setup and Maintenance - Oracle Fusion Cloud Applications' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Financials'" sap:VirtualizedContainerService.HintSize="410,157" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4cdef64a-f7d9-4709-87af-23f92d9217e3" Version="V4">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="fa-ewqc-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FuseTaskListManagerTop" CVScreenId="bcea9f4d-e085-4427-a569-d804a0dc689c" CvTextArea="189, 212, 55, 12" CvTextArgument="Financials" CvType="Text" DesignTimeRectangle="183, 206, 196, 27" DesignTimeScaleFactor="1" ElementType="ListItem" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='TABLE' /&gt;&lt;webctrl aria-role='option' class='x1l5 p_AFSelected' type='' tag='LI' aaname='Financials' check:innerText='Financials' /&gt;" Guid="ad4f75bd-d61c-456b-bb61-44444d858dc2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMgAAAAfCAYAAACiY4IJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHJSURBVHhe7Zg7jsIwEEC5U46xNRTcAgkhJO6wFQ1tbkDFAehWoloJaftcIBfAqziO43HMxKAFtLtvpNfEeMbFPH+YvK2WZvVeGoIgZDReTBCEINIhBKnqCwA4EARAAUEAFBAEQAFBABQQBEABQQAUEARA4UZBjmZRFKaImZXmVFdmOyvM4hDPeSDn0kyLjdnH3wUvWBf8GbwgdV1nC/K7mg1B4H5+UJCgEd3Ovlj3p0w457SbByfQ3GzPwfz1ph9bHwe12zF3akQniJrX1d8Ha5L5AYY8UJDCTHeVHbNNaa9hF1MdGgH6prZjtlHb+fJ36Sa3IjRzQkFG8tq5zW+6/PZ7lx8gzV2CyDdI15SxIEHzicaU+GZ38zup2loux7W3xrXvibxDQQDGuUuQvBMkaNzBzh1JFjeyr+UEiU4Hj6iTlze8hvUyAqR5uiC2QYNdPLnT+1r5J0h+3sR647wAjhcL4q5syUYOBInq+hxXBUnn7aXp1ssbBHSeLsjg3yg/pgnSP/zFu0fUyckrr2FcsWCMGwUB+F8gCIACggAoeEE+Pr8QBCCCEwRAAUEAFBAEQAFBABQQBEABQQAUBoIQBCEDQQhCicaLb+zvWI3eafZgAAAAAElFTkSuQmCC" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='qbd0w35m1' title='Setup and Maintenance - Setup and Maintenance - Oracle Fusion Cloud Applications' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Intercompany'" sap:VirtualizedContainerService.HintSize="410,157" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4cdef64a-f7d9-4709-87af-23f92d9217e3" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://fa-ewqc-dev4-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FuseTaskListManagerTop?_afrLoop=49504864676915184&amp;_adf.ctrl-state=kn6j0dekp_731" CvTextArgument="* Intercompany" CvType="Text" DesignTimeRectangle="55, 724, 73, 14" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-role='presentation' css-selector='body&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span&amp;gt;span&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;table' idx='24' tableCol='1' tableRow='1' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='TABLE' /&gt;&lt;webctrl isleaf='1' type='' tag='TD' class='' aaname='Intercompany' check:innerText='Intercompany' /&gt;" Guid="b5c1f004-2ebf-4252-85ca-c4888cda993a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE0AAAASCAYAAAAe0VOSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGtSURBVFhH7ZfBrcIwDIaZp1IPzII4dJBeskylTgJiEgR7+MlpnNh/klIKegeUX0JqHMexvzitOFDT2zqgoem1GrQdatB2yEC7uY6G6aFNRW31+1U1aDtUheaf3UhD39GRf+eJnkT0nE7LuLe+aCN60HzuaDgv/u6S9hBfsYlvZr9PNPQjzXHPE833KznJyV1X/MqxpQ6xOzemuRAPm4Jr1uNVaMd+pBsPfFK2cPHzECUR4xeSlcLEFwrl+H4viXHhIkLRIZ7NSc9ZP4mtc/JrYg4LcJNfaV9+NnD1IbyCFjcLp5JBC92kTqE+Z2MkoV2t02AQugdQAIhzRnovzE+v4WfVMBHgolVotYIRTGxv0+YIQ5+yVm6P8VU3stahJb98zuanodn8EmjOgefwarK+Ai0HwcI5HNfs2GlboanOimPsprzTatD8FXVTdjVZH0KDd1romhpQc+VVod5eere8Ba2UE0DzsTdCC7Wk2pJ2QZMvqPbFLxCu0TZ7TVbsb0EbycU81FUNoCS3+i1BaMgg6Tf+EWTvtG8ohyhq0EqC6476DWj/rAZthxq0HfoDBQSN5qw3S+AAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='da9tpc09m' title='Setup and Maintenance - Oracle Applications' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Manage Intercompany'" sap:VirtualizedContainerService.HintSize="410,193" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4cdef64a-f7d9-4709-87af-23f92d9217e3" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://fa-ewqc-dev4-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FuseTaskListManagerTop?_afrLoop=49504864676915184&amp;_adf.ctrl-state=kn6j0dekp_731" CvTextArgument="Manage Intercompany Balancing Rules" CvType="Text" DesignTimeRectangle="781, 478, 209, 14" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span&amp;gt;span&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' idx='3' tableCol='230' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='xmx' aaname='Manage Intercompany Balancing Rules' check:innerText='Manage Intercompany Balancing Rules' /&gt;" Guid="7d8d28ec-bfb7-43b4-ad5a-a7fa1ea9153a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANUAAAASCAYAAADMrZuPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPqSURBVGhD7VrLjeswDEw7ackVpIl04LMv7iCnXHJLBbmkg72lDi0k6zMcUY7s9UMCPw2wwFqWKHLIoeTFHkxDQ8OmOPBAQ0PD39BE1dCwMZqoGho2RhLV626Op94cznfzI6a8TH/uzeE0mv4lXnwPnO8Xc+NxRu28vSPkWvzU8XIbenO8bl8Im9pV4+vNYXjyzBwb1AiJajTHM4nHjp9H966JaifwucZ82qKuKbpNi/9fQYnPmKfpTr3pHjimYIMaIVFdTH8dBWk/7vluOnTycREdIDpqx88X07mTjU+3KSi1a4C9brA24LTEvbJT1AOJ8L93tkiEf7g/zqUxCxeHbSSwJ86t8G8qPstbitdyybxo8yKW8pwVhI1ZKRCt6JzN5H/yVfPXPyz1zwNtB1vRbjF/vHY03TDqjUCLj3yXzWG6jbl9mMNCfmXtyL0yUd0EuXYzu8AmBxOXjLggw3zvwESCvza6oKffYxDCBnYQv0YUcpiH9giZqCR50l4gTHYuMc/FwQ1BKSy/Vx6vt8fixXdinsLFH3gWxV3kSxZCLpZUWOxvin2pfyzexCtzWs6f5Ko2Pi3fb0VVrL95nnNRYXezYy4gWVQCSBIlwxGtBY32qEPis0gUvRMoEkFrcB75OvuutC+PwzosRBYl8iLnzXBWyfN0s0gFiV0+Iogcf7T4PNhf9fpX6V9pfUmsWT3UcKXFB0K1qBFVuf5IVARFVCkZyem8U6sJoSITQTuicd1kr+y4f5eRA8UekImqIIhMOGxbF3rmY2mcOExJmxcVJpvfLeZZNEKFKwsuXAshhPDHKfhR/F3uH91YAFJUev6qGxDHRyK3qBZVViPBjj8pxdgEVVTOieEOaqSTpRB0mUx59Gb25kSlkcZYKypFKA78jp9L48DNElFhjPF5Fc8WtkBG018LVz8LLjqH5CM3C/bXxbXSP24iATWi4nrg5wglPscr+JTnpyAqzT6D4tVFFVWIz5qo6BuoSKYU1dQBQtD4bu6bKicmYo2oVJ8KgtP8sHG5cf3bIU/ajKg0n1bxDM/0gS+gFB3uJ0Xla4HjWumfZtv6WSMq6bf0S0CLj/ItasnFkouK7aQ1Mp9uPfhREBV9XAojeDUYTf+Ade/I9Mfl8frMP/SCPdthsaDju/yYjciIKCSFm4UXRdwbSWLxoh8l/2B8iaiOwyX6wVeSpTxPS4kDhohbiT/y5LmC/VJc6/2bGomMt0pUoo6mv1TXi4oaJ8aItzJtf+Ti3fg3/kdFPAX+E0jxbQMu4n2i/H32aXxeVNw1+YTYObYWlbxO7gzidPje5vt5UTU07AxNVA0NG6OJqqFhY/wCaw2Qs+asFJQAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='da9tpc09m' title='Setup and Maintenance - Oracle Applications' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="Label 'Manage Intercompany Bal…'" Mode="Appears" Retry="True">
+                        <uix:VerifyExecutionOptions.Target>
+                          <uix:TargetAnchorable BrowserURL="fa-ewqc-dev2-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FuseTaskListManagerTop" CVScreenId="6b8f8fc1-edee-4571-8e68-3b67bba2fbfb" DesignTimeRectangle="34, 242, 522, 35" DesignTimeScaleFactor="1.5" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='TABLE' /&gt;&lt;webctrl type='' tag='H1' class='xnw ' aaname='Manage Intercompany Balancing Rules' check:innerText='Manage Intercompany Balancing Rules' /&gt;" Guid="9cdcc60f-e58a-4921-82b8-c75db497c9cf" InformativeScreenshot="1f9b7621ed14053150d1efc241426dfb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='j9481c0dd' title='Manage Intercompany Balancing Rules - Setup and Maintenance - Oracle Fusion Cloud Applications' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive" />
+                        </uix:VerifyExecutionOptions.Target>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                  </uix:NClick>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="5" DisplayName="Click 'Legal Entity Rules'" sap:VirtualizedContainerService.HintSize="410,157" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4cdef64a-f7d9-4709-87af-23f92d9217e3" Version="V4">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="fa-ewqc-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FuseTaskListManagerTop" CVScreenId="a1bd735f-3881-4b57-b2ec-48ac61a4f0a5" CvTextArea="184, 560, 98, 14" CvTextArgument="Legal Entity Rules" CvType="Text" DesignTimeRectangle="176, 553, 114, 30" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl aaname='  From Ledger To Ledger From Legal Entity To Legal Entity From Primary Segment Value To Primary Segment Value Receivables Account Payables Account Start Date End Date Source Category Transaction Type' aria-role='presentation' tag='TABLE' /&gt;&lt;webctrl type='' class='x1gd' aaname='' tag='DIV' check:innerText='Legal Entity Rules' /&gt;" Guid="067b8ed0-679e-4b53-8f19-738bafb0a24e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHYAAAAiCAYAAACKuC3wAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJUSURBVGhD7ZhtbsIwDIa5A2J3QYjrINTzAGdB4t+kXQPBSTLFaRv7rVPCVr4sP9J+ENrUeZ/ERZsFxyQzHHBs4GKN4mKN4mKN4mKN4mKN4mKN4mKN4mKN4mKNcp/Y8z6sFstwOOMX03Nq5mG1u+BwuO6W4WsxH/41J7wUOIUtqz3PL8eroBz+UkN37yZUXPkvPlPseh+u+MVNSgJL4yOoOcR55mF75GMKnyg2yuh2r5By3PTj22YjxMgTqJ0oyS2xdF+zySeKrr2Ew1o+I83/I8e/MfQoS5FQyIHXLOtPzyfpKJZlI9YlusLwWbeYTKwIvC0q7V6+k9uAu+toUXmRtDHadvYfsf2cgzq0jcPHmYBIrE9rr2oO8sRWiRXztNnQ8yrrGGEisakQLqJfWCyKi8DPDJJWIxbfbRBoDoEHVCM2zc9PndpaC+9Ydf2ELnawSftsQOwfmFQsLjQGXC6+cF+N2MLGiBQDrRRLa6T5C204gjlA54kU60CxmFk/T+oAcqyeScWqOwxPKPuMkqpP7CPF0j3LcNiNtD8lB+oUrC5ZB2vTKLb0DA5mWMFEYjHwtJAcnP6O1e55vdh8ktSNGlFzGL5j+zrbH0goFufJ90BNz3nHYuuAwqClEv0vv/YkoMyu3bCdOSp2UEMOsSy2a/up3nydHCd4+Bqq2K42pZU2e7UVE/xXcc14JfeJnQCSf+fuezbVLfKNebxYPOUjbfQdSF3n/hPybjxerPMSXKxRXKxRXKxRXKxRXKxRXKxRXKxRXKxRXKxRZt2/+hxbuFij/AIWFmNUgdQWNwAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='qbd0w35m1' title='Manage Intercompany Balancing Rules - Setup and Maintenance - Oracle Fusion Cloud Applications' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V4" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <If Condition="[in_Stage = &quot;2&quot;]" sap:VirtualizedContainerService.HintSize="410,427" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,245" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="5" DisplayName="Click 'Legal Entity Rules +'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="4cdef64a-f7d9-4709-87af-23f92d9217e3" Version="V4">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="fa-ewqc-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FuseTaskListManagerTop" CVScreenId="23ec0ee1-eda5-45f4-9860-90096fa86b16" CvElementArea="174, 654, 22, 21" CvTextArea="176, 656, 18, 17" CvType="Icon" DesignTimeRectangle="173, 652, 26, 26" DesignTimeScaleFactor="1" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' class='xiz' tag='TABLE' /&gt;&lt;webctrl type='' tag='IMG' class='x1kb' aaname='Create' /&gt;" Guid="96ace887-4c4e-4575-83d8-776d5a299f62" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAABQSURBVEhL7c2xCgAgCITh3r6loTeuORM0iRPqPrjFwb+MJEUeUBiGYRgmFK6tL4tg2OXtsIx4Z2F4Ix96ZzHDmtOIhmGX/8I3MAzDMExaeAI6UYD0JB3gJwAAAABJRU5ErkJggg==" InformativeScreenshot="2770cab62c8e0b63766880844cac0b5d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='no8eyagrh' title='Manage Intercompany Balancing Rules - Setup and Maintenance - Oracle Fusion Cloud Applications' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V4" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CVScreenId="23ec0ee1-eda5-45f4-9860-90096fa86b16" CvTextArea="176, 612, 105, 14" CvTextArgument="Legal Entity Rules" CvType="Text" DesignTimeRectangle="168, 605, 122, 30" FuzzySelectorArgument="&lt;webctrl aaname='  From Ledger To Ledger From Legal Entity To Legal Entity Receivables Account Payables Account Start Date End Date Source Category Transaction Type' aria-role='presentation' tag='TABLE' /&gt;&lt;webctrl type='' class='x1gd' aaname='' tag='DIV' check:innerText='Legal Entity Rules' /&gt;" Guid="206b4ce2-185b-4cfd-bdd3-ac33b39e8864" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH4AAAAiCAYAAACZb20EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAJlSURBVHhe7Zh7joIwEIe9g3HvYozXIYRzbPYE6llMuIvRk3TDozDzY1oKsqg78yX9Q0ofM18fxI0zVLLBB4YOTLxSTLxSTLxSTLxSTLxSTLxSTLxSTLxSTLxSpom/nd1ht3WH0x1r/oZr5r52W5dfscK5x2lf1w1KUeKrMtesjwPHqeJM7aejdDnOpS6ZS+pp5dx+uPi9u9ywJoFoHK3AueJZO+lZgOiclmdZ8a0oaaWXhX++d3nBpfHdS2Q+Ib4ZL3OXrm//LuzMSko3zt1djqTu+O1+qt/Hs3u0/YbHlSS3/fn2EA/ra5BbPheac56vxBMFWE48q5MDZnUsYD/5NnmBRFHCAhr8QmvaghSMg43D3+XjQFwMSTw8myDeL9y6JW3H3pPGTGMx8Sii+d1MvAkC67g0toqTxZPd2Rb/Lh8ThGEcEfHsXWzHCNzxVEqyeBTa/KZzqPqR55HGYuL7o5yWJii2ejFgfz3UUuSTIix+bMf7MZ8Q79sW5ciYvJ3PB8tVqngiV1pEmGvJxxiLiY8lJbbjo4LeQnx/euVVn+IxX4Ht/AlA5pgqftBXAL9pInkIsZh4XicLZEG1kw3v/mGiKGuKTzteh+2660i6NsRvnb7/4B0POcHTNJVZ4ukxwwLrVuBwMv3xhF/19G7cu0OdDCFgIHTHe7lR8fSLuXomJlNoH1lokng6zrBvyAMuRjpHWHAYu5SfMaaJn4uY2Omr9HXgwvl81hEPq3fuKn0F/e6K7fbPYyXxxrth4pVi4pVi4pVi4pVi4pVi4pVi4pVi4pVi4pXSiad/p1r5v8XEKy2eX2L1M5DPH35EAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_15" />
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="fa-ewqc-dev5-saasfaprod1.fa.ocs.oraclecloud.com/fscmUI/faces/FuseTaskListManagerTop" CVScreenId="3fa673d6-19b5-4f99-8101-d34218837afe" CvTextArea="20, 164, 351, 23" CvTextArgument="Manage Intercompany Balancing Rules" CvType="Text" DesignTimeRectangle="23, 163, 348, 22" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='TABLE' /&gt;&lt;webctrl type='' tag='H1' class='xnw ' aaname='Manage Intercompany Balancing Rules' check:innerText='Manage Intercompany Balancing Rules' /&gt;" Guid="ea29fe22-652d-430e-a579-a0db009496b7" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='ljbpmcsxkb7g6g' title='Manage Intercompany Balancing Rules - Setup and Maintenance - Oracle Fusion Cloud Applications' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1936, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACxSURBVDhPY3gro/KfEsyALkAqHkQGfHD3/f/r2In/hMDPHbv+v7ewRzUApPnfx49gBX8fPwEbhA3D1IDod1pGCANgNv9YtRbDicgYpAnkAmS1YANgpqJrwIZBzkdWDzcA5Ap0xbgwDKAYAALIgYMLfwqNBqv9c+UawoDvs+fDBUEK0DXB8OfkTHhAfm1oQRgAChyQZmIBcmCjJKQvhWUYUYeMQTEAUoOsh3opkVxMsQEAeeKZe/jyOhcAAAAASUVORK5CYII=" Selector="&lt;html app='chrome.exe' omit:htmlwindowname='fzukj5217' omit:title='*Setup and Maintenance - Oracle*' /&gt;" Title="Manage Intercompany Balancing Rules - Setup and Maintenance - Oracle Fusion Cloud Applications" Url="[in_Link]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
